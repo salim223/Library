@@ -1,0 +1,199 @@
+body {
+    padding-top: 150px;
+    margin: 0; 
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    color: #28282B;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.addBook {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; 
+}
+
+#addBtt {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #656E77;
+  color: white;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #CAD4DF;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #69727a;
+    transition: all 0.25s;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.bookForm {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Add this line */
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+}
+
+.addTable {
+    text-align: center;
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #656E77; 
+}
+
+.second_part {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+button.add,
+button.cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #656E77;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.cancel {
+    background-color: #d9534f;
+}
+
+button.add:hover,
+button.cancel:hover {
+    background-color: #CAD4DF;
+    transform: translateY(-2px);
+}
+
+button.add:active,
+button.cancel:active {
+    background-color: #69727a;
+    transform: translateY(0);
+}
+
+.main {
+    margin-top: 50px; 
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 250px 250px;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.cell {
+    position: relative;
+    border: 2px solid #DDDBDE;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .cell .remove-book {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cell:hover button {
+    display: block;
+  }
+  
+  .toggle-read {
+    background-color: #d9534f;
+    color: white;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .remove-book {
+    background-color: #d9534f;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-read.read {
+    background-color: #5cb85c; 
+  }
+  
+  .toggle-read:not(.read) {
+    background-color: #d9534f; 
+  }
+  
